@@ -16,8 +16,8 @@ BEGIN
 
 EXEC msdb.dbo.sp_update_job @job_id = @jobid, 
  @notify_level_email=2, 
- @notify_email_operator_name=N'DBA' -- ! <-- change if needed
- @notify_level_eventlog=2,
+ @notify_email_operator_name=N'DBA', -- ! <-- change if needed
+ @notify_level_eventlog=2
 
 FETCH NEXT FROM jobstep_cursor INTO @jobid;
 
