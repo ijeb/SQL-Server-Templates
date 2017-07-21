@@ -7,6 +7,6 @@ IF NOT EXISTS(
    WHERE name = N'<database_name, sysname, your_database_name>'
 )
 	CREATE DATABASE <database_name, sysname, your_database_name>
-		ON PRIMARY (FILENAME = '<database_primary_file_path,,C:\Program files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\your_database_name.MDF>')
+		ON PRIMARY (FILENAME = '<database_primary_file_path,,C:\Program files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Data\your_database_name.MDF>')
 		FOR ATTACH
 GO

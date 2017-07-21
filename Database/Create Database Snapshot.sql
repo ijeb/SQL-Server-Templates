@@ -16,6 +16,6 @@ GO
 -- Create the database snapshot
 CREATE DATABASE <Database_Name, sysname, Database_Name>_<Snapshot_Id,,Snapshot_ID> ON
 ( NAME = <Database_Name, sysname, Database_Name>, FILENAME = 
-'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\<Database_Name, sysname, Database_Name>_<Snapshot_Id,,Snapshot_ID>.ss' )
+'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Data\<Database_Name, sysname, Database_Name>_<Snapshot_Id,,Snapshot_ID>.ss' )
 AS SNAPSHOT OF <Database_Name, sysname, Database_Name>;
 GO

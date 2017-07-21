@@ -6,16 +6,16 @@
 CREATE DATABASE [<database_name, sysname, TestDB>] ON 
 	PRIMARY (
 		Name= N'<database_name, sysname, TestDB>_data', 
-		FILENAME= N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_data.mdf'),
+		FILENAME= N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_data.mdf'),
 	FILEGROUP [<filegroup_name1, sysname, FG_1>] (
 		NAME=N' <database_name, sysname, TestDB>_<filegroup_name1, sysname, FG_1>', 
-		FILENAME =N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_<filegroup_name1, sysname, FG_1>.ndf'),
+		FILENAME =N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_<filegroup_name1, sysname, FG_1>.ndf'),
 	FILEGROUP [<filegroup_name2, sysname, FG_2>] (
 		NAME=N' <database_name, sysname, TestDB>_<filegroup_name2, sysname, FG_2>', 
-		FILENAME =N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_<filegroup_name2, sysname, FG_2>.ndf')
+		FILENAME =N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_<filegroup_name2, sysname, FG_2>.ndf')
 	LOG ON (
 		NAME =N'<database_name, sysname, TestDB>_log', 
-		FILENAME =N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_log.ldf');
+		FILENAME =N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>_log.ldf');
 GO
 
 -- Backup database
@@ -23,11 +23,11 @@ BACKUP DATABASE [<database_name, sysname, TestDB>]
 	FILEGROUP=N'PRIMARY',
 	FILEGROUP=N'<filegroup_name1, sysname, FG_1>',
 	FILEGROUP=N'<filegroup_name2, sysname, FG_2>' 
-	TO DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak'
+	TO DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak'
 
 -- Backup log
 BACKUP LOG [<database_name, sysname, TestDB>] 
-	TO DISK = '<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
+	TO DISK = '<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
 	WITH 
 		NO_TRUNCATE ,
 		NORECOVERY, 
@@ -42,7 +42,7 @@ BACKUP LOG [<database_name, sysname, TestDB>]
 -- Restore filegroups - one at a time
 RESTORE DATABASE [<database_name, sysname, TestDB>] 
 	FILE = N'<database_name, sysname, TestDB>_data' 
-	FROM DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
+	FROM DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
 	WITH  
 		FILE = 1,  
 		NORECOVERY,  
@@ -52,7 +52,7 @@ GO
 
 RESTORE DATABASE [<database_name, sysname, TestDB>] 
 	FILE = N' <database_name, sysname, TestDB>_<filegroup_name1, sysname, FG_1>' 
-	FROM  DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
+	FROM  DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
 	WITH  
 		FILE = 1,  
 		NORECOVERY,  
@@ -62,7 +62,7 @@ GO
 
 RESTORE DATABASE [<database_name, sysname, TestDB>] 
 	FILE = N' <database_name, sysname, TestDB>_<filegroup_name2, sysname, FG_2>' 
-	FROM  DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
+	FROM  DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
 	WITH  
 		FILE = 1,  
 		NORECOVERY,  
@@ -71,7 +71,7 @@ RESTORE DATABASE [<database_name, sysname, TestDB>]
 
 -- Restore log
 RESTORE LOG [<database_name, sysname, TestDB>] 
-	FROM DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
+	FROM DISK = N'<file_location, sysname, D:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\><database_name, sysname, TestDB>.bak' 
 	WITH  
 		FILE = 2,  
 		NOUNLOAD,  

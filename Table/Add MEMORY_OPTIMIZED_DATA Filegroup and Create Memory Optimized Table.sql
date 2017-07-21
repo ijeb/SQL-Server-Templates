@@ -16,7 +16,7 @@ ADD FILEGROUP <memory_optimized_data_filegroup, , sample_database_filegroup> CON
 ALTER DATABASE <database_name, sysname, Adventureworks>
 ADD FILE
   ( NAME = <logical_filegroup_filename1, , sample_database_filegroup_file1>,
-    FILENAME = N'<filegroup_filename1, , C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Datasample_database_1>')
+    FILENAME = N'<filegroup_filename1, , C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Data\Datasample_database_1>')
 TO FILEGROUP <memory_optimized_data_filegroup, , sample_database_filegroup>
 
 --Drop table if it already exists.

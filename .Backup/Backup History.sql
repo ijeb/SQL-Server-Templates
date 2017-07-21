@@ -23,6 +23,6 @@ SELECT  CONVERT(CHAR(100), SERVERPROPERTY('Servername')) AS [server] ,
 FROM    msdb.dbo.backupmediafamily
         INNER JOIN msdb.dbo.backupset ON msdb.dbo.backupmediafamily.media_set_id = msdb.dbo.backupset.media_set_id
 WHERE   ( CONVERT(DATETIME, msdb.dbo.backupset.backup_start_date, 102) >= GETDATE() - 7 )
-AND database_name = N'TNT_PP'
+AND database_name = N''
 ORDER BY msdb.dbo.backupset.database_name ,
         msdb.dbo.backupset.backup_finish_date

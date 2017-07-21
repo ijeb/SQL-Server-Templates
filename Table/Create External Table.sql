@@ -1,20 +1,20 @@
--- =========================================
--- Create external table template
--- =========================================
-USE <database, sysname, AdventureWorks>
+-- ==============================
+-- Create External Table Template
+-- ==============================
+USE <database_name, sysname, AdventureWorks>
 GO
 
-IF OBJECT_ID('<schema_name, sysname, dbo>.<table_name, sysname, sample_externaltable>', 'U') IS NOT NULL
-DROP EXTERNAL TABLE <schema_name, sysname, dbo>.<table_name, sysname, sample_externaltable>
+IF OBJECT_ID('<schema_name, sysname, dbo>.<table_name, sysname, sample_external_table>', 'U') IS NOT NULL
+    DROP EXTERNAL TABLE <schema_name, sysname, dbo>.<table_name, sysname, sample_external_table>
 GO
 
-CREATE EXTERNAL TABLE <schema_name, sysname, dbo>.<table_name, sysname, sample_externaltable>
+CREATE EXTERNAL TABLE <schema_name, sysname, dbo>.<table_name, sysname, sample_external_table>
 (
-    <column1_name, sysname, c1> <column1_datatype, , int> <column1_nullability,, NOT NULL>, 
-    <column2_name, sysname, c2> <column2_datatype, , char(10)> <column2_nullability,, NULL>, 
-    <column3_name, sysname, c3> <column3_datatype, , datetime> <column3_nullability,, NULL>, 
+    <column1_name, sysname, c1> <column1_datatype, , int> <column1_nullability, , NOT NULL>,
+    <column2_name, sysname, c2> <column2_datatype, , char(10)> <column2_nullability, , NULL>,
+    <column3_name, sysname, c3> <column3_datatype, , datetime> <column3_nullability, , NULL>
 )
-WITH 
+WITH
 (
     LOCATION = N'<location, nvarchar(3000), sample_location>',
     DATA_SOURCE = <data_source_name, sysname, sample_data_source>,

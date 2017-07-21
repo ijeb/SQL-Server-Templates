@@ -1,6 +1,6 @@
--- ======================================================
--- Create Scalar Function Template for Azure SQL Database
--- ======================================================
+-- =====================================================================
+-- Create Scalar Function Template for Azure SQL Data Warehouse Database
+-- =====================================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,7 +22,7 @@ BEGIN
     DECLARE <@ResultVar, sysname, @Result> <Function_Data_Type, ,int>
 
     -- Add the T-SQL statements to compute the return value here
-    SELECT <@ResultVar, sysname, @Result> = <@Param1, sysname, @p1>
+    SET <@ResultVar, sysname, @Result> = <@Param1, sysname, @p1>
 
     -- Return the result of the function
     RETURN <@ResultVar, sysname, @Result>

@@ -5,7 +5,7 @@ USE master
 GO
 
 BACKUP DATABASE <Database_Name,sysname,Database_Name> 
-	TO  DISK = N'<Backup_Path,,C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\><Database_Name,sysname,Database_Name>.bak' 
+	TO  DISK = N'<Backup_Path,,C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\><Database_Name,sysname,Database_Name>.bak' 
 WITH 
 	NOFORMAT,
 	NOINIT,  

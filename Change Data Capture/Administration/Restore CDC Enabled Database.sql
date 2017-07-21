@@ -5,7 +5,7 @@ USE master
 GO
 
 RESTORE DATABASE <Database_Name,sysname,Database_Name>
-	FROM  DISK = N'<Backup_Path,,C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\><Database_Name,sysname,Database_Name>.bak' 
+	FROM  DISK = N'<Backup_Path,,C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\><Database_Name,sysname,Database_Name>.bak' 
 WITH  
 	FILE = 1,  
 	NOUNLOAD,  
